@@ -1,0 +1,23 @@
+/* Noto Sans SC woff2 — 使用浏览器本地缓存，无需额外 HTTP 请求 */
+/* 如果浏览器不支持 woff2，降级到系统自带中文字体 */
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Sans SC'), local('PingFang SC'), local('Microsoft YaHei');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Noto Sans SC'), local('PingFang SC'), local('Microsoft YaHei');
+}
+@font-face {
+  font-family: 'Noto Sans SC';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Sans SC'), local('PingFang SC'), local('Microsoft YaHei');
+}

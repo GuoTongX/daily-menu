@@ -1,0 +1,109 @@
+/* ===== CSS 主题变量（靛蓝色） ===== */
+:root {
+  --color-primary: #4F46E5;
+  --color-primary-strong: #4338CA;
+  --color-primary-fg: #ffffff;
+  --color-primary-ring: #6366F1;
+  --color-primary-subtle: #EEF2FF;
+  --color-primary-border: #C7D2FE;
+  --color-bg: #FAFAFE;
+  --color-surface: #ffffff;
+  --color-muted: #F3F4F6;
+  --color-border: #E5E7EB;
+  --color-text: #1E1B4B;
+  --color-text-muted: #6B7280;
+  --color-text-subtle: #9CA3AF;
+  --color-danger: #DC2626;
+  --color-danger-bg: #FEF2F2;
+  --color-danger-border: #FECACA;
+  --radius-sm: 6px;
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --shadow-card: 0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.06);
+  --shadow-card-hover: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.04);
+  --shadow-btn: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* ===== CSS Reset（最小化，替代 Tailwind Preflight） ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===== 全局样式 ===== */
+body {
+  font-family: 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 滚动条 */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+/* ===== 统一下拉选择框 ===== */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  padding-right: 32px !important;
+  cursor: pointer;
+  font-family: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+select:hover {
+  border-color: var(--color-primary-ring) !important;
+}
+select:focus {
+  outline: none;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 2px var(--color-primary-subtle);
+}
+/* 下拉选项统一主题色 */
+select option {
+  background: var(--color-surface);
+  color: var(--color-text);
+  padding: 8px 12px;
+}
+select option:hover,
+select option:focus {
+  background: var(--color-primary-subtle);
+}
+
+/* ===== 动画 ===== */
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* 加载省略号闪烁 */
+@keyframes blink {
+  0%, 20% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
+/* ===== 导航项悬停效果（替代 JS inline handlers） ===== */
+.nav-item:hover {
+  background: var(--color-muted);
+  color: var(--color-text);
+}
+
+/* ===== 卡片 ===== */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+/* ===== 卡片悬停效果 ===== */
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+}

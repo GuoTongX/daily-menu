@@ -1,0 +1,90 @@
+<!--
+  每日食方 · 验证码邮件模板
+  ============================================================
+  本文件为独立维护的 HTML 邮件模板，可直接编辑样式与文案结构。
+  渲染时仅替换以下占位符（勿改动标记本身）：
+    {{label}}     操作类型标签，如：注册账号 / 找回密码（自动生成）
+    {{headline}}  邮件标题文案（自动生成）
+    {{intro}}     正文引导文案（自动生成）
+    {{code}}      6 位验证码（自动生成）
+  主色以站点品牌色（靛蓝 #4F46E5）为基准，如需统一换肤请同时调整下方颜色。
+  ============================================================
+-->
+<div style="background-color: #F4F4F5; margin: 0; padding: 28px 12px;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="border-collapse: collapse; max-width: 600px; width: 100%; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; border: 1px solid #E5E7EB;">
+          <!-- 顶部品牌区 -->
+          <tr>
+            <td style="background-color: #4F46E5; padding: 26px 32px;">
+              <div style="color: #FFFFFF; font-size: 20px; font-weight: 700; line-height: 1.4; font-family: -apple-system, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                每日食方
+              </div>
+              <div style="color: #C7D2FE; font-size: 13px; margin-top: 4px; line-height: 1.4; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                智能食谱规划 · 让「今天吃什么」变得简单可执行
+              </div>
+            </td>
+          </tr>
+          <!-- 操作标签 -->
+          <tr>
+            <td style="padding: 26px 32px 6px 32px;">
+              <div style="display: inline-block; background-color: #EEF2FF; color: #4338CA; border-radius: 999px; padding: 4px 14px; font-size: 13px; font-weight: 600; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                {{label}} · 邮箱验证
+              </div>
+            </td>
+          </tr>
+          <!-- 正文 -->
+          <tr>
+            <td style="padding: 16px 32px 0 32px;">
+              <div style="font-size: 24px; font-weight: 700; color: #1F2937; line-height: 1.4; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                {{headline}}
+              </div>
+              <div style="font-size: 14px; color: #6B7280; line-height: 1.8; margin-top: 10px; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                {{intro}}
+              </div>
+            </td>
+          </tr>
+          <!-- 验证码卡片 -->
+          <tr>
+            <td style="padding: 22px 32px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse: collapse;">
+                <tr>
+                  <td align="center" style="background-color: #F4F4F5; border: 1px dashed #C7D2FE; border-radius: 12px; padding: 24px 16px;">
+                    <div style="font-size: 13px; color: #6B7280; margin-bottom: 10px; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                      你的验证码
+                    </div>
+                    <div style="font-size: 40px; font-weight: 700; letter-spacing: 10px; color: #4338CA; font-family: 'SF Mono', Menlo, Consolas, 'Courier New', monospace;">
+                      {{code}}
+                    </div>
+                    <div style="font-size: 13px; color: #6B7280; margin-top: 12px; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                      验证码有效期 <span style="color: #DC2626; font-weight: 600;">10 分钟</span>，请勿向任何人透露
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <!-- 安全提示 -->
+          <tr>
+            <td style="padding: 0 32px 8px 32px;">
+              <div style="font-size: 13px; color: #6B7280; line-height: 1.9; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                • 如果不是你本人发起本次操作，请忽略此邮件，你的账号不会受到影响。<br/>
+                • 每日食方不会以任何方式向你索取验证码，谨防诈骗。
+              </div>
+            </td>
+          </tr>
+          <!-- 页脚 -->
+          <tr>
+            <td style="padding: 18px 32px 26px 32px; border-top: 1px solid #F3F4F6;">
+              <div style="font-size: 12px; color: #9CA3AF; line-height: 1.7; font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Arial, sans-serif;">
+                此邮件由「每日食方」系统自动发送，请勿直接回复。<br/>
+                如有疑问请联系系统管理员处理。
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>

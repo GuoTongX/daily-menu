@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# 运行时密钥与本地环境配置
+server/.secret_key
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+*.tsbuildinfo
+
+# 数据库文件
+*.db
+*.sqlite
+*.sqlite3
+
+# 日志与临时文件
+*.log
+*.tmp
+*.swp
+
+# 系统 / 编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
