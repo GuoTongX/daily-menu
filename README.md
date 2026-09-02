@@ -51,7 +51,7 @@ mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS daily_menu CHARACTER SET utf8
 cd server
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-uvicorn main:app --reload --port 8000
+uvicorn main:app --reload --port 8000   # 想换端口改这里，如 --port 8080
 ```
 
 首次启动会自动建表；未设置 `DM_SECRET_KEY` 时会生成随机密钥并保存到 `server/.secret_key`。后端默认在 `http://localhost:8000`。
@@ -68,10 +68,10 @@ python seed_public_recipes.py
 ```bash
 cd client
 npm install
-npm run dev    # http://localhost:5173
+npm run dev    # http://localhost:5173；换端口：npm run dev -- --port 3000
 ```
 
-前端会把 `/api` 代理到 `http://localhost:8000`。生产构建用 `npm run build && npm run preview`。
+前端会把 `/api` 代理到 `http://localhost:8000`（后端换了端口记得同步改 `client/vite.config.ts` 里的代理地址）。生产构建用 `npm run build && npm run preview`。
 
 ### 4. 走通一遍
 
